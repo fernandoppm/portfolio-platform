@@ -18,9 +18,9 @@ Este projeto é uma **Single Page Application (SPA)** moderna desenvolvida como 
 A Plataforma de Portfólios oferece uma experiência de usuário rica e fluida com as seguintes funcionalidades:
 
 * **Página de Início (Homepage):**
-    * Apresenta uma listagem em formato de cards de todos os portfólios criados.
-    * Animações de *hover* nos cards para feedback visual.
-    * Botão de acesso rápido para a criação de um novo portfólio.
+    * **Seção de Boas-Vindas ("Hero Section"):** Uma apresentação inicial impactante com título, subtítulo e um botão de "Começar Agora" para engajar o usuário.
+    * **Listagem Dinâmica:** Apresenta os portfólios criados em formato de cards, com animações de entrada em cascata.
+    * **Animações de Hover:** Feedback visual elegante nos cards ao passar o mouse.
 
 * **Busca e Filtro em Tempo Real:**
     * Campo de busca interativo na página inicial.
@@ -35,7 +35,7 @@ A Plataforma de Portfólios oferece uma experiência de usuário rica e fluida c
 * **Interface e Experiência do Usuário (UI/UX):**
     * **Tema Dual (Light/Dark):** Botão no cabeçalho para alternar instantaneamente entre um tema claro e um escuro.
     * **Persistência do Tema:** A escolha de tema do usuário é salva no Local Storage, mantendo a preferência ao recarregar a página.
-    * **Animações com Framer Motion:** Transições suaves entre as páginas e micro-interações em botões e cards que tornam a navegação mais agradável.
+    * **Animações Avançadas com Framer Motion:** Transições de página suaves, animação de entrada em cascata (*stagger*) para os elementos da tela, e animações de layout na lista de portfólios ao filtrar, proporcionando um feedback visual instantâneo e elegante.
     * **Design Responsivo (Mobile-First):** A interface se adapta perfeitamente a diferentes tamanhos de tela.
 
 * **Navegação e Persistência:**
