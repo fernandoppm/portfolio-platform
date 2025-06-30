@@ -6,7 +6,7 @@
 
 .header {
   background: var(--card-background);
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--card-border);
   border-radius: 12px;
@@ -20,16 +20,18 @@
 .logoLink {
   color: var(--primary-text);
   text-decoration: none;
+  z-index: 10; 
 }
 
 .logoLink h1 {
-    font-size: 1.5rem;
-    margin: 0;
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .nav {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .navLink {
@@ -44,4 +46,71 @@
 .navLink:hover {
   color: var(--primary-text);
   background-color: var(--card-border);
+}
+
+
+.hamburgerButton {
+  display: none; 
+  background: none;
+  border: none;
+  color: var(--primary-text);
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.mobileNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background: var(--background-end);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  box-shadow: -10px 0px 30px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%); 
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobileNavOpen {
+  transform: translateX(0);
+}
+
+.closeButton {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: var(--primary-text);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.mobileNav .navLink {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    
+    display: none;
+  }
+  
+  .hamburgerButton {
+    display: block;
+  }
+
+  .logoLink h1 {
+    font-size: 1.2rem; 
+  }
+
+  .header {
+    padding: 1rem 1.5rem;
+  }
 }
