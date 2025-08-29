@@ -1,4 +1,4 @@
-# Plataforma de Portfólios - Showcase Interativo 🚀
+# Plataforma de Portfólios - Interface com React 🚀
 
 ![React](https://img.shields.io/badge/React-18.2.0-%2361DAFB?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-%233178C6?style=for-the-badge&logo=typescript)
@@ -9,13 +9,11 @@
 
 ## 📋 Descrição
 
-Este projeto é uma **Single Page Application (SPA)** moderna desenvolvida como projeto final do módulo de Front-End. A aplicação permite que usuários criem, visualizem e gerenciem portfólios profissionais de forma dinâmica e intuitiva. O design foi cuidadosamente elaborado com um tema dual (Light/Dark), efeitos de *glassmorphism* e um design responsivo e animado para garantir uma excelente experiência de usuário.
+Este projeto é a interface de usuário (Frontend) para a "Plataforma de Portfólios". Desenvolvido como uma **Single Page Application (SPA)** com **React** e **TypeScript**, ele **consome dados de uma API externa construída em NestJS**. A aplicação permite que usuários criem, visualizem e gerenciem portfólios profissionais de forma dinâmica e intuitiva, com um design moderno e totalmente responsivo.
 
 <br>
 
 ## ✨ Funcionalidades Principais
-
-A Plataforma de Portfólios oferece uma experiência de usuário rica e fluida com as seguintes funcionalidades:
 
 * **Página de Início (Homepage):**
     * **Seção de Boas-Vindas ("Hero Section"):** Uma apresentação inicial impactante com título, subtítulo e um botão de "Começar Agora" para engajar o usuário.
@@ -27,63 +25,41 @@ A Plataforma de Portfólios oferece uma experiência de usuário rica e fluida c
     * Filtra os portfólios por nome ou cargo à medida que o usuário digita.
 
 * **Gerenciamento Completo de Portfólios (CRUD):**
-    * **Criação:** Formulário completo e intuitivo para adicionar novos portfólios, incluindo seções para habilidades, experiências profissionais e projetos.
-    * **Leitura (Detalhes):** Página dedicada para cada portfólio, acessada via rota dinâmica (`/portfolio/:id`), que exibe todas as informações de forma organizada.
-    * **Atualização (Edição):** Funcionalidade para editar um portfólio existente, reutilizando o mesmo formulário de criação pré-preenchido com os dados atuais.
+    * **Criação e Edição:** Formulário completo e reutilizável para criar ou atualizar portfólios.
+    * **Leitura (Detalhes):** Página dedicada para cada portfólio, acessada via rota dinâmica.
     * **Exclusão:** Opção para remover um portfólio permanentemente.
 
 * **Interface e Experiência do Usuário (UI/UX):**
-    * **Tema Dual (Light/Dark):** Botão no cabeçalho para alternar instantaneamente entre um tema claro e um escuro.
-    * **Persistência do Tema:** A escolha de tema do usuário é salva no Local Storage, mantendo a preferência ao recarregar a página.
-    * **Animações Avançadas com Framer Motion:** Transições de página suaves, animação de entrada em cascata (*stagger*) para os elementos da tela, e animações de layout na lista de portfólios ao filtrar, proporcionando um feedback visual instantâneo e elegante.
-    * **Design Responsivo (Mobile-First):** A interface se adapta perfeitamente a diferentes tamanhos de tela.
+    * **Tema Dual (Light/Dark):** Botão para alternar instantaneamente entre um tema claro e escuro, com a preferência salva no Local Storage.
+    * **Animações Avançadas com Framer Motion:** Transições de página suaves, animação de entrada em cascata (*stagger*), e animações de layout na lista ao filtrar.
+    * **Design Responsivo (Mobile-First):** Interface que se adapta a desktops, tablets e celulares, incluindo um menu "hambúrguer".
 
 * **Navegação e Persistência:**
-    * **Roteamento:** Navegação fluida entre as páginas sem recarregamentos, utilizando `React Router DOM`.
-    * **Persistência de Dados:** Todos os portfólios criados são salvos no Local Storage do navegador.
+    * **Roteamento:** Navegação fluida entre as páginas utilizando `React Router DOM`.
+    * **Persistência de Dados via API:** Todas as informações dos portfólios são enviadas e recebidas de uma API backend (NestJS), e salvas permanentemente em um banco de dados.
 
 <br>
 
 ## 🛠️ Tecnologias Utilizadas
 
-Este projeto foi construído utilizando as seguintes tecnologias e conceitos:
-
-* **Frontend:**
-    * **React:** Biblioteca JavaScript para construção da interface de usuário.
-    * **TypeScript:** Superset do JavaScript que adiciona tipagem estática.
-    * **CSS Modules:** Para escopo e modularização dos estilos CSS.
-    * **React Router DOM:** Para gerenciamento de rotas e navegação.
-    * **React Icons:** Biblioteca de ícones (edição, lixeira, busca, etc.).
-    * **Framer Motion:** Biblioteca para criar animações fluidas e declarativas.
-    * **Context API:** Para gerenciamento de estado global (portfólios e tema).
-    * **Local Storage API:** Para persistência de dados no lado do cliente.
-
-* **Ferramentas:**
-    * **Vite:** Ferramenta de build rápida para projetos frontend.
-    * **Git:** Sistema de controle de versão.
-    * **GitHub:** Plataforma para hospedagem do código.
-
-<br>
-
-## 🌟 Boas Práticas e Diferenciais
-
-O projeto foi desenvolvido com foco em:
-
-* **Código Limpo e Componentização:** Estrutura de componentes modular e reutilizável (Cards, Botões, etc.), facilitando a manutenção.
-* **Design Responsivo:** Layouts planejados para funcionar bem em qualquer dispositivo.
-* **Estilização Profissional e Tematização:** Interface visualmente agradável, com paleta de cores coesa para os temas Light e Dark e uso de variáveis CSS.
-* **Experiência de Usuário (UX) Polida:** O uso estratégico de animações, feedback visual e persistência de dados eleva a qualidade percebida da aplicação.
-* **Gerenciamento de Estado Eficiente:** Uso da Context API para criar uma arquitetura de dados limpa e centralizada.
+* **React** e **TypeScript**
+* **Vite** (Ambiente de Desenvolvimento)
+* **CSS Modules** (Estilização)
+* **React Router DOM** (Roteamento)
+* **Framer Motion** (Animações)
+* **React Icons** (Ícones)
+* **Context API** (Gerenciamento de Estado)
+* **Fetch API** (Comunicação com o Backend)
 
 <br>
 
 ## ⚙️ Como Executar o Projeto
 
-Siga os passos abaixo para rodar o projeto localmente:
+**Pré-requisito:** Para que o frontend funcione completamente, o projeto do backend (`portfolio-api-sqlite`) deve estar rodando, pois ele é o responsável por fornecer os dados.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/fernandoppm/portfolio-platform.git
+    git clone [https://github.com/fernandoppm/portfolio-platform.git](https://github.com/fernandoppm/portfolio-platform.git)
     ```
     
 2.  **Acesse a pasta do projeto:**
